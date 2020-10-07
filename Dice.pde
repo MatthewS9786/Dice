@@ -23,8 +23,7 @@ void setup()
   }
   void mousePressed()
   {
-      background(255);
-      redraw();   
+    redraw();   
   }
   class Die 
   { int myX, myY, value ;
