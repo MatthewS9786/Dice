@@ -1,7 +1,4 @@
 Die[]bob=new Die[16];
-
-
-
 void setup()
   {
     size(300,300);  
@@ -32,8 +29,7 @@ void setup()
   class Die 
   { int myX, myY, value ;
       
-      
-      Die(int x, int y) 
+       Die(int x, int y) 
       {
          myX=x;
          myY=y;
