@@ -1,4 +1,7 @@
 Die[]bob=new Die[16];
+
+
+
 void setup()
   {
     size(300,300);  
@@ -18,18 +21,19 @@ void setup()
       }
     }
     textSize(20);
-    fill(0);
     text(total,150,270);
     text("Total: ",90,270);
   }
   void mousePressed()
   {
-    redraw();   
+      background(255);
+      redraw();   
   }
   class Die 
   { int myX, myY, value ;
       
-       Die(int x, int y) 
+      
+      Die(int x, int y) 
       {
          myX=x;
          myY=y;
@@ -42,8 +46,11 @@ void setup()
       void show()
       {
           fill(0,255,0);
-          square(myX,myY,50);
-          fill(0);
+          line(myX,myY,myX+50,myY);
+          line(myX+50,myY,myX+50,myY+50);
+          line(myX+50,myY+50,myX,myY+50);
+          line(myX,myY+50,myX,myY);
+          fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
           if(value==1){
             ellipse(myX+25,myY+25,7,7);
           }
